@@ -1,13 +1,22 @@
 # Rock, Paper, Scissors (Including Extended Version) 
 *A modular, object-oriented Python game.*
 
+
+
 ## Overview
 This is a console-based version of **Rock, Paper, Scissors**, implemented in Python as part of a coding challenge.  
 It supports both:
 - **Classic version:** Rock, Paper, Scissors  
 - **Extended version:** Rock, Paper, Scissors, Lizard, Spock  
 
-The project demonstrates **clean code structure**, **object-oriented programming**, and **modular design principles**.
+
+
+## Features
+- **Clean Code Structure**
+- **Modular Design**
+- **Flexible Rules for Future Expansion**
+
+
 
 ## Core Components
 
@@ -42,3 +51,14 @@ evaluate_round(): Compares choices and updates scores.
 check_end_condition(): Checks whether the game should end or not.
 
 game_end(): Displays the final results.
+
+
+
+### main.py
+Serves as the **enty point** of the program by calling game_play() method.
+
+
+## Future Improvements
+- Create a GUI version
+- Include Timimng
+- Consider Multithreading
