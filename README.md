@@ -59,6 +59,6 @@ Serves as the **enty point** of the program by calling game_play() method.
 
 
 ## Future Improvements
-- Create a GUI version
-- Include Timimng
+- Create a GUI Version
+- Include Timing
 - Consider Multithreading
