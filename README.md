@@ -27,21 +27,11 @@ RULES = {
 ### Game.py
 Defines the Game class with all the main gameplay logic:
 
-Method
-Description
-game_play()
-Runs the main loop and controls gameplay flow
-game_setup()
-Initializes scores, rounds, and mode
-choose_version()
-Lets the player choose between classic and extended mode
-get_user_choice()
-Handles player input validation
-get_computer_choice()
-Generates computer’s random move
-evaluate_round()
-Compares choices and updates scores
-check_end_condition()
-Determines when the game should end
-game_end()
-Displays the final results
+game_play(): Runs the main loop and controls gameplay flow
+game_setup(): Initializes scores, rounds, and game version(classic or extended)
+choose_version(): Lets the player choose between classic and extended versions
+get_user_choice(): Gets player's input and validate it
+get_computer_choice(): Generates computer’s random choice
+evaluate_round(): Compares choices and updates scores
+check_end_condition(): Checks whether the game should end or not
+game_end(): Displays the final results
