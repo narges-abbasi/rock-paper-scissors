@@ -21,6 +21,8 @@ RULES = {
     "lizard": ["paper","spock"],
     "spock": ["scissors","rock"]
 }
+```
+
 
 ### Game.py
 Defines the Game class with all the main gameplay logic:
