@@ -1,13 +1,24 @@
 import unittest
 from game import Game
-from data import RULES
 
 # To verify that evaluate_round() works as expected
 class TestEvaluateRound(unittest.TestCase):
 
     game_test = Game()
 
-    def test_player_wins(self):
+    def test_evaluate_round(self):
+        cases = [
+            ("rock", "scissors", (1, 0, 1)),
+            ("scissors", "rock", (0, 1, 1)),
+            ("rock", "rock", (0, 0, 0))
+        ]
+        for player, computer, expected in cases:
+            with self.subTest(player=player, computer=computer):
+                ps, cs, rounds = self.game_test.evaluate_round(player, computer, 0, 0, 0)
+                self.assertEqual((ps, cs, rounds), expected)
+
+
+'''    def test_player_wins(self):
         player_score, computer_score, rounds = self.game_test.evaluate_round(
             player_choice="rock",
             computer_choice="scissors",
@@ -46,6 +57,7 @@ class TestEvaluateRound(unittest.TestCase):
         self.assertEqual(computer_score, 1)
         self.assertEqual(rounds, 3)
 
+'''
 
 if __name__ == "__main__":
     unittest.main()
