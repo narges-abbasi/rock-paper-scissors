@@ -61,12 +61,12 @@ class Game:
                 continue
             return user_choice
 
-    def get_computer_choice(self, options : list[str]) -> str:
+    def get_computer_choice(self, options: list[str]) -> str:
         computer_choice = random.choice(options)
         return computer_choice
 
     # Comparison and update score
-    def evaluate_round(self, player_choice, computer_choice, player_score, computer_score, rounds) -> tuple:
+    def evaluate_round(self, player_choice: str, computer_choice: str, player_score: int, computer_score: int, rounds: int) -> tuple:
         if player_choice == computer_choice:
             print("It's a draw!")
         elif computer_choice in RULES[player_choice]:
@@ -80,7 +80,7 @@ class Game:
 
         return player_score, computer_score, rounds 
     
-    def check_end_condition(self, user_condition, rounds, user_score, computer_score) -> bool:
+    def check_end_condition(self, user_condition: str, rounds: int, user_score: int, computer_score: int) -> bool:
         if user_condition == "1":
             if user_score == 2 or computer_score == 2:
                 return True
@@ -89,7 +89,7 @@ class Game:
                 return True
         return False
 
-    def game_end(self, user_score, computer_score) -> None:
+    def game_end(self, user_score: int, computer_score: int) -> None:
         print("-------------------------------------------------------------------")
         print("Game is Over!")
         if user_score > computer_score:
