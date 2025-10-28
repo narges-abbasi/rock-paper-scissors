@@ -23,7 +23,14 @@ class ComputerPlayer(Player):
         return random.choice(options)
 
 class PredictablePlayer(Player):
+    def __init__(self, fixed_choice: str = "scissors"):
+        self.choice = fixed_choice
+
+        super().__init__(self)
     #override the method for a player with a fixed choice (scissors)
+    def get_choice(self, options):
+        return self.choice
+
     pass
 
 
