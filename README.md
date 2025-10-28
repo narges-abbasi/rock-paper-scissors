@@ -58,7 +58,20 @@ game_end(): Displays the final results.
 Serves as the **enty point** of the program by calling game_play() method.
 
 
+### test_game.py
+Contains unit tests for core game functionality using Python's unittest framework.
+
+
+### players.py
+Defines an abstract base class *Player* and three subclasses representing different players types:
+
+- HumanPlayer - a player with a normal strategy
+- ComputerPlayer - selects a random choice from the options list
+- PredictablePlayer - a player who always play a fixed choice
+
+
 ## Future Improvements
 - Create a GUI Version
 - Include Timing
 - Consider Multithreading
+
